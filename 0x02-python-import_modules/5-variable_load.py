@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-if __name__ == "__main__"
-from variable_load_5.py import a
+if __name__ == "__main__":
+    from variable_load_5.py import a
 
-print("{}".format(a))
+    print("{}".format(a))
