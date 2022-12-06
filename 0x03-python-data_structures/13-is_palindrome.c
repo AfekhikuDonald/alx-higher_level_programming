@@ -3,9 +3,9 @@
 #include <stdlib.h>
 
 /**
-list_len - finds the lenght of a string
-@list: list to be checked
-@Return: lenght
+*list_len - finds the lenght of a string
+*@list: list to be checked
+*@Return: lenght
 */
 size_t list_len(listint_t *list)
 {
@@ -23,18 +23,20 @@ size_t list_len(listint_t *list)
 
 
 /**
-is_palindrome - checks if a singly linked list is palindrome
-@head: linked list
-@Return: 0 if not a palindromw else 1
+*is_palindrome - checks if a singly linked list is palindrome
+*@head: linked list
+*@Return: 0 if not a palindromw else 1
 */
 int is_palindrome(listint_t **head)
 {
 	listint_t *temp;
 	int *arr, j, k, i;
-
+	
+	if (*head == NULL)
+		return (1);
 	temp = *head;
 	k = list_len(temp);
-	arr = (int *) malloc(sizeof(int) * k);
+	arr = (int *)malloc(sizeof(int) * k);
 	if (arr == NULL)
 		return (2);
 	i = 0;
@@ -50,5 +52,6 @@ int is_palindrome(listint_t **head)
 		{
 			return (0);
 		}
+	}
 	return (1);
 }
