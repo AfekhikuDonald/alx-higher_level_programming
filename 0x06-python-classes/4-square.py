@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 # 4-square.py
-"""creates a square"""
+"""Creates a square"""
 
 
 class Square:
