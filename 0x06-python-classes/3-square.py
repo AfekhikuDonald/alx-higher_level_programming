@@ -8,7 +8,7 @@ class Square:
 
     def __init__(self, size=0):
         """initialise the class
-        Args: 
+        Args:
             size : the size of the square
         """
         if not isinstance(size, int):
