@@ -3,7 +3,7 @@
 """Square module."""
 
 
-class square:
+class Square:
     """define the class."""
 
     def __init__(self, size):
