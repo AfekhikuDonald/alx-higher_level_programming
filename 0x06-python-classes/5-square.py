@@ -1,21 +1,24 @@
 #!/usr/bin/python3
-# 5-square.py
-"""create a class"""
+"""Square module."""
 
 
 class Square:
-    """ defines a square"""
+    """Defines a square."""
 
     def __init__(self, size=0):
-          """initialise the class
+        """Constructor.
         Args:
-            size : the size of the square
+            size: length of side of the square.
         """
+        if not (isinstance(size, int)):
+            raise TypeError("size must be an integer")
+        if size < 0:
+            raise ValueError("size must be >= 0")
         self.__size = size
 
     @property
     def size(self):
-         """Properties for the length of a sise of a square.
+        """Properties for the length of a sise of a square.
         Raises:
             TypeError: if size is not an integer.
             ValueError: If size < 0.
@@ -30,23 +33,22 @@ class Square:
             Returns:
                 nothing.
         """
-        if not isinstance(value, int):
+        if not (isinstance(value, int)):
             raise TypeError("size must be an integer")
         if value < 0:
             raise ValueError("size must be >= 0")
         self.__size = value
 
     def area(self):
-         """defines the area of the square
-
-        Returns: the square of the size"""
+        """Area of the square.
+        Returns:
+            thee size squared.
+        """
         return self.__size ** 2
 
     def my_print(self):
-        """prints the square"""
-        if self.__size == 0:
-            print()
-        else:
-            for i in range(self.size):
-                print("#" * self.size)
-
+        """Prints the square"""
+        for i in range(self.size):
+            for j in range(self.size):
+                print("#", end="\n" if j is self.size - 1 and i != j else "")
+        print()
