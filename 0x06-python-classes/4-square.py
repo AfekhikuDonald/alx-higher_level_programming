@@ -1,15 +1,15 @@
 #!/usr/bin/python3
 # 4-square.py
-"""Creates a square"""
+"""Creates a square."""
 
 
 class Square:
-    """defines the square"""
+    """defines the square."""
 
     def __init__(self, size=0):
-        """initialise the class
+        """initialise the class.
         Args:
-            size : the size of the square
+            size : the size of the square.
         """
         self.size = size
 
@@ -31,8 +31,9 @@ class Square:
         self._size = value
 
     def area(self):
-         """defines the area of the square
+         """defines the area of the square.
 
-        Returns: the square of the size"""
+        Returns: 
+            the square of the size."""
         return self.size ** 2
 
