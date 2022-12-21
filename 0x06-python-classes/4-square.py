@@ -1,21 +1,20 @@
 #!/usr/bin/python3
-# 4-square.py
-"""Creates a square."""
+"""Square module."""
 
 
 class Square:
-    """Defines the square."""
+    """Defines a square."""
 
     def __init__(self, size=0):
-        """Initialise the class.
+        """Constructor.
         Args:
-            Size : the size of the square.
+            size: length of side of the square.
         """
         self.__size = size
 
     @property
     def size(self):
-         """Properties for the length of a sise of a square.
+        """Properties for the length of a sise of a square.
         Raises:
             TypeError: if size is not an integer.
             ValueError: If size < 0.
@@ -31,8 +30,8 @@ class Square:
         self.__size = value
 
     def area(self):
-         """Defines the area of the square.
-
-        Returns: 
-            The square of the size."""
+        """Area of the square.
+        Returns:
+            thee size squared.
+        """
         return self.__size ** 2
