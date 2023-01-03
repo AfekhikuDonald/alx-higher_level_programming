@@ -6,9 +6,11 @@ this function returns the addition of its two arguments
 	>>> add_integer = __import__('0-add_integer').add_integer
 	>>> add_integer(2, 3)
 	5
+
 ::
 	>>> add_integer(2, -3)
 	-1
+
 The function also works with floating-point values.
 
 ::
