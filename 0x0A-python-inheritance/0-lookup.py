@@ -1,6 +1,7 @@
 #!/usr/bin/python3
+"""defines an object attribute lookup function"""
+
 
 def lookup(obj):
-    object_methods = [method_name for method_name in dir(object)
-                  if callable(getattr(object, method_name))]
-    return (object_methods)
+    """return a list of the available attributes and methods"""
+    return (dir(obj))
