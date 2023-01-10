@@ -1,4 +1,4 @@
 #!/bin/bash
 git add .
-git commit -m $0
+git commit -m 'file i/o'
 git push
